@@ -4,7 +4,7 @@ module Whenever
       
       def output
         path_required
-        "cd #{@path} && #{@framework_env}=#{@environment} /usr/bin/env rake #{task}"
+        "cd #{@path} && #{@framework_env}=#{@environment} #{@rake_path} #{task}"
       end
       
     end
