@@ -1,12 +1,13 @@
 unless defined?(Whenever)
   $:.unshift(File.dirname(__FILE__))
-   
-  # Hoping to load Rails' Rakefile
-  begin
-    load 'Rakefile'
-  rescue LoadError => e
-    nil
-  end
+  
+  #  remove so merb loads. Don't see the point of loading the Rails Rakefile anyhow
+  # # Hoping to load Rails' Rakefile
+  # begin
+  #   load 'Rakefile'
+  # rescue LoadError => e
+  #   nil
+  # end
 end
 
 require 'chronic'
