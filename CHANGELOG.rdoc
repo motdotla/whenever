@@ -1,3 +1,7 @@
+== 0.3.7 / July 26th, 2009
+
+* Allow user to replace RAILS_ENV with MERB_ENV or other via framework_env option [Scott Motte]
+
 == 0.3.6 / June 15th, 2009
 
 * Setting a PATH in the crontab automatically based on the user's PATH. [Javan Makhmali]
