@@ -9,6 +9,7 @@ module Whenever
         @at          = options[:at]
         @cron_log    = options[:cron_log]
         @environment = options[:environment] || :production
+        @framework_env = options[:framework_env] || "RAILS_ENV"
         @path        = options[:path] || Whenever.path
       end
     

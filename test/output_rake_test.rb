@@ -37,6 +37,22 @@ class OutputRakeTest < Test::Unit::TestCase
     end
   end
   
+  context "A rake command that overrides the framework_env set" do
+    setup do
+      @output = Whenever.cron \
+      <<-file
+        set :path, '/my/path'
+        every 2.hours do
+          rake "blahblah", :framework_env => 'MERB_ENV'
+        end
+      file
+    end
+    
+    should "output the rake command using that framework_env" do
+      assert_match two_hours + ' cd /my/path && MERB_ENV=production /usr/bin/env rake blahblah', @output
+    end
+  end
+  
   context "A rake command with environment set" do
     setup do
       @output = Whenever.cron \
