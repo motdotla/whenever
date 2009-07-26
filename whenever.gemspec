@@ -38,7 +38,8 @@ Gem::Specification.new do |s|
      "test/output_env_test.rb",
      "test/output_rake_test.rb",
      "test/output_runner_test.rb",
-     "test/test_helper.rb"
+     "test/test_helper.rb",
+     "whenever.gemspec"
   ]
   s.homepage = %q{http://github.com/scottmotte/whenever}
   s.rdoc_options = ["--charset=UTF-8"]
